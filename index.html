@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recherche d'école</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <div class="title">Parcoursup+</div>
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+      </nav>
+      <div class="columns">
+        <div class="column"></div>
+        <div class="column">
+            <p><br>Conseils d'utilisation : <br>Recuperer le nom de l'école via la plateforme Parcoursup . <br> Par exemple pour cette école : <br> <li>https://dossier.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=3647</li> <br> <li>le nom est I.U.T de Valence</li></p>
+            <h1 class="title">Recherche d'école</h1>
+            <div class="field has-addons">
+                <div class="control">
+                    <input class="input is-link" type="text" placeholder="Nom de l'école" id="searchInput">
+                </div>
+                <div class="control">
+                    <button class="button is-link" id="searchButton">Rechercher</button>
+                </div>
+            </div>
+            <div id="result"></div></div>
+        <div class="column"></div>
+      </div>
+    
+    
+</body>
+<script src="script.js"></script>
+</html>
