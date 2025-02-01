@@ -2,13 +2,25 @@
     --main-color: #000091;
   }
 
-.navbar{
-    background-color: var(--main-color);
-}
+
 .navbar .title {
     color: white;
     margin: -4px;
 }
+.navbar .subtitle {
+    
+    color: white;
+    margin: -4px;
+}
+.navbar a{
+    color: white;
+    margin: -4px;
+    padding: 20px;
+    font-size: large;
+    text-align: center;
+}
+
+
 
 .title{
     padding: 20px;
@@ -17,4 +29,10 @@
 .subtitle{
     margin-top: var(--bulma-block-spacing);
     text-decoration: underline;
+}
+
+.li{
+    text-align: center;
+    margin-top:20px;
+
 }

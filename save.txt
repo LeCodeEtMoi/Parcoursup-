@@ -1,50 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
-    interface Ecole {
-        "Établissement": string;
-        "Adresse": string;
-        "Ville": string;
-        "CodePostal": string;
-        "Telephone": string;
-        [key: string]: string;
-    }
-
-    let ecoles: Ecole[] = [];
-    let donneesChargees = false;
-
-    fetch("fr-esr-parcoursup.csv")
-        .then(response => response.text())
-        .then(text => {
-            Papa.parse(text, {
-                header: true,
-                skipEmptyLines: true,
-                complete: (result: any) => {
-                    ecoles = result.data;
-                    donneesChargees = true;
-                    console.log("Données chargées :", ecoles.map(e => e["Lien de la formation sur la plateforme Parcoursup"]));
-                }
-            });
-        });
-
-    (document.getElementById("searchButton") as HTMLButtonElement).addEventListener("click", rechercherEcole);
-
-    function rechercherEcole() {
-        if (!donneesChargees) {
-            alert("Les données ne sont pas encore chargées, veuillez patienter.");
-            return;
-        }
-
-        const searchInput = (document.getElementById("searchInput") as HTMLInputElement).value.trim();
-        const encodedSearchInput = encodeURI(searchInput.toLowerCase());
-
-        console.log("URL recherchée :", encodedSearchInput);
-
-        const ecoleTrouvee = ecoles.find(ecole => {
-            const url = ecole["Lien de la formation sur la plateforme Parcoursup"]?.trim().toLowerCase();
-            return url && encodeURI(url) === encodedSearchInput;
-        });
-
-        const resultDiv = document.getElementById("result") as HTMLDivElement;
-        resultDiv.innerHTML = ecoleTrouvee ? `<h2 class="subtitle">Informations générales</h2>
+<h2 class="subtitle">Informations générales</h2>
 <p><strong>Session:</strong> ${ecoleTrouvee["Session"]}</p>
 <p><strong>Statut de l’établissement:</strong> ${ecoleTrouvee["Statut de l’établissement de la filière de formation (public, privé…)"]}</p>
 <p><strong>Code UAI:</strong> ${ecoleTrouvee["Code UAI de l'établissement"]}</p>
@@ -113,6 +67,4 @@ document.addEventListener("DOMContentLoaded", () => {
 <p><strong>Effectif des candidats en terminale générale ayant reçu une proposition d’admission:</strong> ${ecoleTrouvee["Effectif des candidats en terminale générale ayant reçu une proposition d’admission de la part de l’établissement"]}</p>
 <p><strong>Effectif des candidats en terminale technologique ayant reçu une proposition d’admission:</strong> ${ecoleTrouvee["Effectif des candidats en terminale technologique ayant reçu une proposition d’admission de la part de l’établissement"]}</p>
 <p><strong>Effectif des candidats en terminale professionnelle ayant reçu une proposition d’admission:</strong> ${ecoleTrouvee["Effectif des candidats en terminale professionnelle ayant reçu une proposition d’admission de la part de l’établissement"]}</p>
-<p><strong>Effectif des autres candidats ayant reçu une proposition d’admission:</strong> ${ecoleTrouvee["Effectif des autres candidats ayant reçu une proposition d’admission de la part de l’établissement"]}</p>` : "<p>Aucune école trouvée.</p>";
-    }
-});
+<p><strong>Effectif des autres candidats ayant reçu une proposition d’admission:</strong> ${ecoleTrouvee["Effectif des autres candidats ayant reçu une proposition d’admission de la part de l’établissement"]}</p>`

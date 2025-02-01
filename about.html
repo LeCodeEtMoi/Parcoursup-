@@ -5,11 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recherche d'école</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="bulma.css.map">
-    <link rel="stylesheet" href="bulma.min.css">
-    <link rel="stylesheet" href="bulma.css">
-
     <script defer src="script.js"></script>
 </head>
 <body>
@@ -39,18 +36,21 @@
           </div>
       </nav>
       <div class="columns">
-        <div class="column"></div>
         <div class="column">
-            <h1 class="title">Recherche d'école</h1>
-            <div class="field has-addons">
-                <div class="control">
-                    <input class="input is-link" type="text" placeholder="URL de la formation Parcoursup" id="searchInput">
-                </div>
-                <div class="control">
-                    <button class="button is-link" id="searchButton">Rechercher</button>
-                </div>
-            </div>
-            <div id="result"></div></div>
+        </div>
+        <div class="column">
+            <h1 class="title">Explication du projet</h1>
+
+            <p>J’ai remarqué que certaines informations sur les formations étaient accessibles ici :  
+                <a href="https://data.enseignementsup-recherche.gouv.fr/pages/parcoursupdata/?disjunctive.fili" target="_blank">
+                    Données officielles de l'enseignement supérieur</a>.
+            </p>  
+            <p>J’ai donc récupéré ces données et les ai intégrées au site afin de les rendre plus visibles.  
+                Vous avez ainsi accès à des informations complémentaires à celles disponibles sur Parcoursup.</p>
+            
+
+            
+        </div>
         <div class="column"></div>
       </div>
     
