@@ -86,6 +86,17 @@ document.addEventListener("DOMContentLoaded", () => {
 <p><strong>% Admis avec mention (BG):</strong> ${ecoleTrouvee["Dont % d’admis avec mention (BG)"]}</p>
 <p><strong>% Admis avec mention (BT):</strong> ${ecoleTrouvee["Dont % d’admis avec mention (BT)"]}</p>
 <p><strong>% Admis avec mention (BP):</strong> ${ecoleTrouvee["Dont % d’admis avec mention (BP)"]}</p>
+
+<p><strong>% d’admis ayant reçu leur proposition d’admission à l'ouverture de la procédure principale :</strong> ${ecoleTrouvee["% d’admis ayant reçu leur proposition d’admission à l'ouverture de la procédure principale"]}</p>
+<p><strong>% d’admis ayant reçu leur proposition d’admission avant le baccalauréat : </strong> ${ecoleTrouvee["% d’admis ayant reçu leur proposition d’admission avant le baccalauréat"]}</p>
+<p><strong>% d’admis ayant reçu leur proposition d’admission avant la fin de la procédure principale :</strong> ${ecoleTrouvee["% d’admis ayant reçu leur proposition d’admission avant la fin de la procédure principale"]}</p>
+<p><strong>% d’admis dont filles:</strong> ${ecoleTrouvee["% d’admis dont filles"]}</p>
+<p><strong>% d’admis néo bacheliers issus de la même académie:</strong> ${ecoleTrouvee["% d’admis néo bacheliers issus de la même académie"]}</p>
+<p><strong>% d’admis néo bacheliers issus de la même académie (Paris/Créteil/Versailles réunies) :</strong> ${ecoleTrouvee["% d’admis néo bacheliers issus de la même académie (Paris/Créteil/Versailles réunies)"]}</p>
+<p><strong>% d’admis néo bacheliers issus du même établissement (BTS/CPGE) :</strong> ${ecoleTrouvee["Dont % d’admis avec mention (BP)"]}</p>
+<p><strong>% d’admis néo bacheliers boursiers :</strong> ${ecoleTrouvee["% d’admis néo bacheliers boursiers"]}</p>
+<p><strong>% d’admis néo bacheliers généraux :</strong> ${ecoleTrouvee["% d’admis néo bacheliers généraux"]}</p>
+
 <p><strong>Effectif des admis néo bacheliers généraux:</strong> ${ecoleTrouvee["Effectif des admis néo bacheliers généraux"]}</p>
 <p><strong>Effectif des admis néo bacheliers technologiques:</strong> ${ecoleTrouvee["Effectif des admis néo bacheliers technologiques"]}</p>
 <p><strong>Effectif des admis néo bacheliers professionnels:</strong> ${ecoleTrouvee["Effectif des admis néo bacheliers professionnels"]}</p>
