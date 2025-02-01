@@ -92,8 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
 <p><strong>% d’admis ayant reçu leur proposition d’admission avant la fin de la procédure principale :</strong> ${ecoleTrouvee["% d’admis ayant reçu leur proposition d’admission avant la fin de la procédure principale"]}</p>
 <p><strong>% d’admis dont filles:</strong> ${ecoleTrouvee["% d’admis dont filles"]}</p>
 <p><strong>% d’admis néo bacheliers issus de la même académie:</strong> ${ecoleTrouvee["% d’admis néo bacheliers issus de la même académie"]}</p>
-<p><strong>% d’admis néo bacheliers issus de la même académie (Paris/Créteil/Versailles réunies) :</strong> ${ecoleTrouvee["% d’admis néo bacheliers issus de la même académie (Paris/Créteil/Versailles réunies)"]}</p>
-<p><strong>% d’admis néo bacheliers issus du même établissement (BTS/CPGE) :</strong> ${ecoleTrouvee["Dont % d’admis avec mention (BP)"]}</p>
+<p><strong>% d’admis néo bacheliers issus du même établissement (BTS/CPGE) :</strong> ${ecoleTrouvee["% d’admis néo bacheliers issus du même établissement (BTS/CPGE) :"]}</p>
 <p><strong>% d’admis néo bacheliers boursiers :</strong> ${ecoleTrouvee["% d’admis néo bacheliers boursiers"]}</p>
 <p><strong>% d’admis néo bacheliers généraux :</strong> ${ecoleTrouvee["% d’admis néo bacheliers généraux"]}</p>
 
